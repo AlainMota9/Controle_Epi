@@ -1,0 +1,34 @@
+#:kivy 1.0
+#:import kivy kivy
+<IconListItem>
+    OneLineListItem:
+        icon: root.icon
+
+MDBoxLayout:
+    adaptive_height: True
+    padding: "10dp"
+
+    MDTextField:
+        id: text_field_error
+        hint_text: "Digite o nome do Colaborador"
+        helper_text: "Nome do colaborador não identificado"
+        helper_text_mode: "on_error"
+        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+        icon_left: "account-hard-hat"
+        digito: "False"
+        on_text_validate: app.on_enter()
+#        on_focus: if self.focus: app.menu.open()
+
+
+    MDIconButton:
+        id: icon_button
+        icon: "send"
+        icon_size: "40sp"
+        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+        pos: text_field_error.width - self.width + dp(8), 0
+        theme_text_color: "Hint"
+        on_release:
+            self.icon = "send-check" if self.icon == "send" else "send"
+
+
+
