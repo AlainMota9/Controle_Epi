@@ -13,18 +13,18 @@ MDBoxLayout:
         hint_text: "Digite o nome do Colaborador"
         helper_text: "Nome do colaborador não identificado"
         helper_text_mode: "on_error"
-        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+        pos_hint: {"center_y": 0.2, "center_x": 0.5}  #Posicionamento do Text Field
         icon_left: "account-hard-hat"
         digito: "False"
         on_text_validate: app.on_enter()
-#        on_focus: if self.focus: app.menu.open()
+#        on_focus: self.pos_hint:{"center_y": 1.5, "center_x": 0.5}
 
 
     MDIconButton:
         id: icon_button
         icon: "send"
         icon_size: "40sp"
-        pos_hint: {"center_y": 0.5, "center_x": 0.5}
+        pos_hint: {"center_y": 0.2, "center_x": 0.5}  #Posicionamento do Text Field
         pos: text_field_error.width - self.width + dp(8), 0
         theme_text_color: "Hint"
         on_release:
