@@ -21,7 +21,7 @@ Aqui estão as tecnologias utilizadas neste projeto.
 * Android
 
 ### Situação do Projeto
-Projeto de software em andamento
+Projeto Finalizado
 
 ### Interface
 ![interface](Imagens/interface.png)
